@@ -1,0 +1,871 @@
+    1  sudo apt update
+    2  sudo apt upgrade -y
+    3  sudo apt update
+    4  mkdir -p yoctotutor/sources
+    5  cd yoctotutor/sources/
+    6  git clone https://github.com/yoctoproject/poky.git -b scrathgap
+    7  sudo apt install git
+    8  sudo apt install build-essential chrpath cpio debianutils diffstat file gawk gcc git iputils-ping libacl1 liblz4-tool locales python3 python3-git python3-jinja2 python3-pexpect python3-pip python3-subunit socat texinfo unzip wget xz-utils zstd
+    9  git clone https://github.com/yoctoproject/poky.git -b scrathgap
+   10  git clone https://github.com/yoctoproject/poky.git
+   11  ls
+   12  cd poky/
+   13  ls
+   14  git checkout scrathgap
+   15  git checkout scarthgap
+   16  git branch
+   17  cd ../../
+   18  source sources/poky/oe-init-build-env
+   19  bitbake core-image-minimal
+   20  echo "kernel.apparmor_restrict_unprivileged_userns = 0" | sudo tee /etc/sysctl.d/99-bitbake.conf
+   21  sudo sysctl --system
+   22  bitbake core-image-minimal
+   23  ls
+   24  scp -r admin@192.168.10.78:/home/admin/yoctotutor/build/meta-mallikharjun .
+   25  ifconfig
+   26  sudo apt install net-tools
+   27  scp -r admin@192.168.10.78:/home/admin/yoctotutor/build/meta-mallikharjun .
+   28  ifconfig
+   29  pwd
+   30  ls
+   31  sudo apt update
+   32  sudo apt install openssh-server
+   33  ls
+   34  lssudo systemctl start ssh
+   35  sudo systemctl start ssh
+   36  sudo systemctl enable ssh
+   37  systemctl status ssh
+   38  clear
+   39  bitbake-layers create-layer meta-mallikharjun
+   40  bitbake-layes add-layer meta-mallikharjun
+   41  bitbake-layers add-layer meta-mallikharjun
+   42  clear
+   43  cd meta-mallikharjun/
+   44  ls
+   45  cd recipes-example/
+   46  ls
+   47  cd example/
+   48  ls
+   49  cd ../
+   50  ls
+   51  rm -rf example/
+   52  mkdir files
+   53  ls
+   54  touch hello.c
+   55  vim hello.c 
+   56  sudo apt install vim
+   57  vim hello.c 
+   58  vim hello_1.0.bb
+   59  cd ../../
+   60  bitbake hello
+   61  cd meta-mallikharjun/recipes-example/
+   62  ls
+   63  mv hell* files
+   64  ls
+   65  cd files/
+   66  ls
+   67  cd ../../
+   68  cd ../
+   69  bitbake hello
+   70  bitbake -c clean hello
+   71  bitbake hello
+   72  bitbake -c clean hello
+   73  bitbake hello
+   74  cd tmp/work/core2-64-poky-linux/
+   75  ls
+   76  cd hello/
+   77  ls
+   78  cd 1.0/
+   79  ls
+   80  cd image/
+   81  ls
+   82  cd usr/
+   83  ls
+   84  cd bin/
+   85  ls
+   86  clear
+   87  cd ../../
+   88  cd ../
+   89  cd ../../
+   90  clear
+   91  ls
+   92  cd meta-mallikharjun/
+   93  ls
+   94  cd recipes-example/
+   95  ls
+   96  cd ../../
+   97  cd ../
+   98  ls
+   99  cd build/
+  100  cd conf/
+  101  ls
+  102  vim .
+  103  cd ../
+  104  bitbake core-image-minimal
+  105  bitbake hello-camke
+  106  bitbake hello-cmake
+  107  clear
+  108  bitbake hello-cmake
+  109  clear
+  110  ls
+  111  vim hello_1.0.bb 
+  112  mkdir hello
+  113  mv hello.c hello
+  114  ls
+  115  vim .
+  116  ls
+  117  ls hello
+  118  vim .
+  119  cd ../
+  120  . sources/poky/oe-init-build-env 
+  121  runqemu qemux86-64
+  122  runqemu qemux86-64 nographical
+  123  runqemu qemux86-64
+  124  runqemu qemux86-64 nogrphical
+  125  runqemu qemux86-64 nographical
+  126  runqemu qemux86-64 nographic
+  127  cd meta-mallikharjun/recipes-example/files/
+  128  pwd
+  129  ls
+  130  cd yoctotutor/
+  131  source sources/poky/oe-init-build-env
+  132  bitbake hello-make
+  133  bitbake hello_make
+  134  bitbake hello-make
+  135  bitbake hello-make -c clean
+  136  bitbake hello-make
+  137  bitbake hello-make-cc
+  138  bitbake dynamic-lib
+  139  cd meta-mallikharjun/recipes-example/files/
+  140  vim .
+  141  touch ../dynamic-lib_1.0.bb
+  142  vim .
+  143  mkdir dynamic-lib
+  144  cd dynamic-lib/
+  145  ls
+  146  mkdir inc src
+  147  cd inc/
+  148  touch math.h
+  149  touch ../src/math.c
+  150  cd ../
+  151  mv ../../dynamic-lib_1.0.bb .
+  152  mv dynamic-lib_1.0.bb ..
+  153  ls
+  154  ls ..
+  155  vim README.md 
+  156  ls
+  157  cd ../
+  158  cd libmodbus/
+  159  ls
+  160  cd ../../yoctotutor/build/meta-mallikharjun/recipes-example/files/libmodbus/
+  161  ls
+  162  md5sum COPYING.LESSER
+  163  sha256sum COPYING.LESSER
+  164  ls
+  165  cd ../
+  166  cd libmodbus/
+  167  ls
+  168  git branch
+  169  ./configure --prefix=/usr
+  170  ls
+  171  make install
+  172  sud make install DESTDIR=${D}
+  173  sud make install
+  174  sudo make install DESTDIR=${D}
+  175  ls
+  176  clear
+  177  cd ../../../../
+  178  cd build/
+  179  gvim .
+  180  vim .
+  181  cd ..
+  182  cd build/
+  183  gvim .
+  184  cd tmp/work/core2-64-poky-linux/
+  185  ls
+  186  rm -rf hello-cmake/
+  187  ls
+  188  cd hello
+  189  cd ..
+  190  gvim .
+  191  cd ../../
+  192  cd ../
+  193  cd meta-mallikharjun/
+  194  ls
+  195  cd recipes-example/
+  196  ls
+  197  cd files/
+  198  ls
+  199  cd ..
+  200  ls
+  201  mkdir files/ pre_files
+  202  mv files/ pre_files
+  203  mkdir files
+  204  cd files/
+  205  mkdir hello
+  206  cd hello/
+  207  vim .
+  208  vim hello.c
+  209  cd ../
+  210  cd hello/
+  211  vim ../hello_1.0.bb
+  212  ls ..
+  213  cd ..
+  214  ls
+  215  cd ..
+  216  ls
+  217  cd files/
+  218  ls
+  219  cd hello/
+  220  ls
+  221  cd ..
+  222  vim .
+  223  clear
+  224  ssh bpravalika@192.168.10.72
+  225  ssh bpravalika@192.168.10.70
+  226  ssh bpravalika@192.168.10.90
+  227  ssh bpravallika@192.168.10.90
+  228  cd ../
+  229  cd ./../../
+  230  cd ../
+  231  source sources/poky/oe-init-build-env
+  232  bitbake hello
+  233  clear
+  234  ls tmp/work/core2-64-poky-linux/
+  235  rm -rf  tmp/work/core2-64-poky-linux/hello
+  236  ls tmp/work/core2-64-poky-linux/
+  237  bitbake hello
+  238  ls tmp/work/core2-64-poky-linux/
+  239  bitbake hello
+  240  hello -c clean
+  241  bitbake hello -c clean
+  242  bitbake hello
+  243  ls tmp/work/core2-64-poky-linux/
+  244  rm -rf hello
+  245  ls
+  246  rm -rf  tmp/work/core2-64-poky-linux/hello
+  247  ls tmp/work/core2-64-poky-linux/
+  248  bitbake hello
+  249  ls tmp/work/core2-64-poky-linux/
+  250  cd hello
+  251  ls tmp/work/core2-64-poky-linux/hello
+  252  ls tmp/work/core2-64-poky-linux/
+  253  cd hello
+  254  bitbake hello
+  255  ls tmp/work/core2-64-poky-linux/
+  256  bitbake hello
+  257  bitbake hello -c clean
+  258  bitbake hello
+  259  ls tmp/work/core2-64-poky-linux/
+  260  ls tmp/work/core2-64-poky-linux/hello/1.0/
+  261  clear
+  262  bitbake hello
+  263  bitbake hello -c clean
+  264  bitbake hello
+  265  ls tmp/work/core2-64-poky-linux/
+  266  ls tmp/work/core2-64-poky-linux/hello/1.0/
+  267  gvim .
+  268  bitbake hello-cmake
+  269  bitbake hello-cmake -c clean
+  270  bitbake hello-cmake
+  271  bitbake hello
+  272  bitbake hello -c clean
+  273  bitbake hello
+  274  clear
+  275  ls
+  276  bitbake hello
+  277  bitbake hello -c clean
+  278  bitbake hello
+  279  ls tmp/work/core2-64-poky-linux/hello/1.0/
+  280  ls
+  281  cd meta-mallikharjun/
+  282  ls
+  283  cd recipes-example/
+  284  ls
+  285  cd files/
+  286  ls
+  287  cd hello/
+  288  ls
+  289  cp hello.c world.c
+  290  ls
+  291  cat world.c 
+  292  cd ../
+  293  ls
+  294  vim hello_1.0.bbappend
+  295  cd ../../
+  296  cd ../
+  297  ls
+  298  bitbake hello
+  299  ls tmp/work/core2-64-poky-linux/hello/1.0/
+  300  bitbake libmodbus
+  301  export ARm=arm
+  302  export ARM=arm
+  303  bitbake libmodbus
+  304  sudo apt update
+  305  sudo apt upgrade
+  306  clear
+  307  sudo apt upgrade
+  308  sudo apt update
+  309  bitbake libmodbus
+  310  bitbake libmodbus -c clean
+  311  bitbake libmodbus
+  312  bitbake libmodbus -c clean
+  313  bitbake libmodbus
+  314  bitbake libmodbus -c clean
+  315  bitbake libmodbus
+  316  clear
+  317  bitbake libmodbus
+  318  bitbake libmodbus -c cleanall
+  319  bitbake libmodbus
+  320  bitbake libmodbus -c cleanall
+  321  bitbake libmodbus
+  322  bitbake libmodbushttps
+  323  bitbake libmodbushttps -c clean
+  324  bitbake libmodbushttps
+  325  bitbake libmodbus -c cleanall
+  326  bitbake libmodbushttps
+  327  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libmodbushttps/1.0/git/
+  328  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libmodbushttps/1.0/
+  329  bitbake libmodbus -c clean
+  330  bitbake libmodbushttps -c clean
+  331  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libmodbushttps/1.0/
+  332  bitbake libmodbushttps
+  333  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libmodbushttps/1.0/git/
+  334  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libmodbushttps/1.0/
+  335  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libmodbushttps/1.0/limodbus-3.1.5
+  336  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libmodbushttps/1.0/
+  337  bitbake libmodbushttps
+  338  bitbake libmodbus
+  339  clear
+  340  ls
+  341  cd conf
+  342  ls
+  343  vim bblayers.conf 
+  344  cd ../
+  345  ls ../sources/poky/
+  346  cd conf/
+  347  vim local.conf
+  348  cd ../
+  349  ls
+  350  cd ..
+  351  ls
+  352  cd sources/
+  353  ls
+  354  cd poky/
+  355  ls
+  356  cd meta
+  357  ls
+  358  cd recipes-bsp/
+  359  ls
+  360  cd ../
+  361  ls
+  362  cd ..
+  363  cd bitbake/
+  364  ls
+  365  cd bin/
+  366  ls
+  367  cd ../
+  368  cd ..
+  369  ls
+  370  cd ../
+  371  find hello
+  372  grep -rin "hello"
+  373  ls
+  374  cd sources/
+  375  ls
+  376  cd poky/
+  377  ls
+  378  cd meta
+  379  ls
+  380  cd im
+  381  cd recipes-bsp/
+  382  ls
+  383  cd ../
+  384  ls
+  385  cd lib/
+  386  ls
+  387  cd ../
+  388  cd yoctotutor/
+  389  source sources/poky/oe-init-build-env
+  390  ls
+  391  bitbake libmobus-git
+  392  bitbake-layers show-recipes | grep libmodbus
+  393  bitbake libmodbus-git
+  394  bitbake libmodbus -c clean
+  395  bitbake libmodbushttps
+  396  bitbake libmodbushttps -c clean
+  397  bitbake libmodbus-git
+  398  clear
+  399  bitbake libiec61850
+  400  git rev-parse a13961110b8238d2d8ea577c1fb7592ba3017ad8
+  401  bitbake libiec61850
+  402  bitbake libiec61850 -c clean
+  403  bitbake libiec61850
+  404  bitbake libiec61850 -c clean
+  405  bitbake libiec61850
+  406  bitbake libiec61850 -c clean
+  407  bitbake libiec61850
+  408  bitbake libiec61850 -c cleanall
+  409  bitbake libiec61850
+  410  ls -l /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libiec61850/1.6.1/
+  411  bitbake libiec61850
+  412  bitbake libiec61850 -c clean
+  413  bitbake libiec61850
+  414  clear
+  415  bitbake libiec61850
+  416  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libiec61850/1.6.1/git/libiec61850.a
+  417  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libiec61850/1.6.1/image/usr/lib/
+  418  ls /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libiec61850/1.6.1/image/
+  419  ls
+  420  cd  /home/pmallikarjun/yoctotutor/build/tmp/work/core2-64-poky-linux/libiec61850/1.6.1/image/
+  421  ls
+  422  cd usr/
+  423  ls
+  424  cd lib/
+  425  ls
+  426  cd ../
+  427  ls
+  428  cd ../
+  429  ls
+  430  cd ../../
+  431  cd ../
+  432  ls
+  433  clear
+  434  cd meta-mallikharjun/
+  435  ls
+  436  mkdir recipe-devtools
+  437  cd recipes-example/
+  438  ls
+  439  cd files
+  440  ls
+  441  cd hello/
+  442  cd ../
+  443  cp -r . ../../recipe-devtools/
+  444  cd ../..
+  445  ls
+  446  mv recipe-devtools/ recipes-devtools
+  447  ls
+  448  cd recipes-devtools/
+  449  ls
+  450  rm -rf hello hello_1.0.bb hello_1.0.bbappend 
+  451  ls
+  452  cd ../
+  453  cd recipes-example/
+  454  ls
+  455  cd files
+  456  ls
+  457  rm -rf lib*
+  458  ls
+  459  cd ../
+  460  ls
+  461  cd files/
+  462  ls
+  463  cd ../
+  464  mv files/* .
+  465  ls
+  466  ls files/
+  467  mv files/ hello
+  468  ls
+  469  cd hello/
+  470  ls
+  471  mv *.c files/
+  472  ls
+  473  cd files/
+  474  ls
+  475  cd ../
+  476  mv ../hello_1.0.bb .
+  477  ls
+  478  cd ../
+  479  cd ../../
+  480  bitbake hello
+  481  clear
+  482  cd meta-mallikharjun/
+  483  ls
+  484  tree
+  485  sudo apt install tree
+  486  sudo apt update
+  487  sudo apt upgrade
+  488  clear
+  489  tree
+  490  clear
+  491  ls
+  492  cd ../
+  493  ls
+  494  tree
+  495  cd meta-mallikharjun/
+  496  tree
+  497  clear
+  498  ls
+  499  cd recipes-example/
+  500  ls
+  501  mkdir hello-make
+  502  cd hello-make/
+  503  ls
+  504  mkdir files
+  505  cd files/
+  506  ls
+  507  vim hello-make.c
+  508  cd ../
+  509  touch hello-make_1.0.bb
+  510  vim hello-make_1.0.bb 
+  511  ls
+  512  cd files/
+  513  ls
+  514  touch Makefile
+  515  vim Makefile 
+  516  make
+  517  ls
+  518  rm -rf a.out 
+  519  vim Makefile 
+  520  make
+  521  ls
+  522  rm -rf hello-make
+  523  clear
+  524  ls
+  525  cd ./
+  526  cd ../
+  527  ls
+  528  cd ../../../
+  529  cd conf/
+  530  ls
+  531  vim .
+  532  ls
+  533  which arm
+  534  sudo apt update
+  535  sudo apt install gcc-arm-none-eabi
+  536  sudo apt update
+  537  sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
+  538  clear
+  539  cd ../meta-mallikharjun/recipes-example/hello
+  540  ls
+  541  cd files/
+  542  ls
+  543  arm-none-eabi-gcc hello.c 
+  544  which arm-none-eabi-gcc
+  545  ls /usr/lib
+  546  cd /usr/lib/arm-linux-gnueabihf/
+  547  ls
+  548  cd ldscripts/
+  549  ls
+  550  vim .
+  551  cd ../../
+  552  cd ..
+  553  ls
+  554  cd share/
+  555  ls
+  556  cd ../
+  557  ls
+  558  cd local/
+  559  ls
+  560  cd etc/
+  561  ls
+  562  cd ../src/
+  563  ls
+  564  cd ../
+  565  gvim .
+  566  cd ..
+  567  cd ../
+  568  cd ~
+  569  clear
+  570  find . -iname "ls.c"
+  571  vim ./yoctotutor/build/tmp/work/core2-64-poky-linux/busybox/1.36.1/busybox-1.36.1/coreutils/ls.c
+  572  cd yoctotutor/sources/poky/meta/conf/
+  573  ls
+  574  vim bitbake.conf 
+  575  ls
+  576  cd ../../../
+  577  cd ../build/meta-mallikharjun/
+  578  ls
+  579  cd recipes-example/
+  580  ls
+  581  clear
+  582  cd 
+  583  cd yoctotutor/build/meta-mallikharjun/recipes-example/
+  584  ls
+  585  cd ../../
+  586  cd ../
+  587  vim .
+  588  cd build/meta-mallikharjun/recipes-example/hello-cmake/
+  589  ls
+  590  mv files/hello-cmake_1.0.bb ../
+  591  ls
+  592  mv ../hello-cmake_1.0.bb .
+  593  ls
+  594  ls files/
+  595  ls
+  596  vim .
+  597  cd ../
+  598  ls
+  599  mkdir -p libstatic/files
+  600  cd libstatic/files/
+  601  vim math.h
+  602  vim math.c
+  603  cd ../
+  604  vim libstatic_1.0.bb
+  605  ls
+  606  vim files/Makefile
+  607  ls
+  608  cd ../../
+  609  cd ../
+  610  ls tmp/work/core2-64-poky-linux/libstatic/1.0/image/usr/lib/libstatic.a 
+  611  clear
+  612  ls tmp/work/core2-64-poky-linux/hello-cc/1.0/image/usr/bin/hello-cc 
+  613  ls tmp/work/core2-64-poky-linux/hello-cc/1.0/image/usr/bin/
+  614  clear
+  615  cd meta-mallikharjun/recipes-example/
+  616  ls
+  617  mkdir -p hello-cc-make/files
+  618  cd hello-cc-make/
+  619  ls
+  620  cd files
+  621  cp ../../hello-cc/files/hello.cpp .
+  622  ls
+  623  vim Makefile
+  624  vim .
+  625  ls
+  626  cd ../
+  627  ls
+  628  cd ..
+  629  mkdir -p hello-cc-cmake/files
+  630  clear
+  631  ls
+  632  cd hello-cc-cmake/
+  633  cd files/
+  634  ls
+  635  vim hello.cpp
+  636  ls
+  637  mv hello-cc-cmake_1.0.bb ..
+  638  ls
+  639  cd ../
+  640  ls
+  641  vim .
+  642  cd ../
+  643  ls
+  644  cd libdynamic-cmake/
+  645  ls
+  646  vim .
+  647  ls
+  648  cd ..
+  649  ls
+  650  mkdir -p libstatic-cc-make/files
+  651  cd libstatic-cc-make/
+  652  ls
+  653  cd files/
+  654  vim hello.cpp
+  655  ls
+  656  mv hello.cpp math.cpp
+  657  ls
+  658  vim math.hpp
+  659  ls
+  660  cd ../
+  661  ls
+  662  vim .
+  663  lear
+  664  cd ../
+  665  s
+  666  ls
+  667  mkdir -p libstatic-cc-cmake/files
+  668  ls
+  669  cd libstatic-cc-cmake/files
+  670  s
+  671  vim math.c
+  672  vim math.c 
+  673  mv math.c math.cpp
+  674  vim CMakeLists.txt
+  675  ls
+  676  cd ../
+  677  ls
+  678  vim libstatic-cc-cmake_1.0.bb
+  679  ls
+  680  cd ..
+  681  ls
+  682  mkdir -p libdynamic-cc-make/files
+  683  cd libdynamic-cc-make/files
+  684  cp -r ../../libdynamic/files/* .
+  685  ls
+  686  mv math.c math.cpp
+  687  mv math.h math.hpp
+  688  ls
+  689  vim Makefile 
+  690  vim *.bb
+  691  ls
+  692  cd ../
+  693  ls
+  694  ls files/
+  695  vim libstatic-cc-make_1.0.bb
+  696  mv libstatic-cc-make_1.0.bb libdynamic-cc-make_1.0.bb
+  697  vim libdynamic-cc-make_1.0.bb 
+  698  ls
+  699  vim .
+  700  cd ../
+  701  ls
+  702  mkdir -p libdynamic-cc-cmake/files
+  703  cd libdynamic-cc-cmake/files
+  704  cp -r ../../libdynamic-cc-make/files/* .
+  705  ls
+  706  rm Makefile 
+  707  ls
+  708  vim CMakeLists.txt
+  709  ls
+  710  gvim .
+  711  vim ./
+  712  vim .
+  713  cd ../
+  714  ls
+  715  mv libdynamic-cc-cmake1.0.bb libdynamic-cc-cmake_1.0.bb 
+  716  ls
+  717  vim .
+  718  cd ../
+  719  ls
+  720  cd ../recipes-devtools/
+  721  ls
+  722  gvim .
+  723  vim .
+  724  ls
+  725  mkdir libmodbushttps
+  726  mv libmodbushttps_1.0.bb libmodbushttps/
+  727  ls
+  728  mkdir libmodbus-git
+  729  mv libmodbus-git_3.1.6.bb libmodbus-git/
+  730  mkdir libiec61850
+  731  mv libiec61850_1.6.1.bb  libiec61850/
+  732  ls
+  733  mkdir libmodbus
+  734  mv libmodbus_1.0.bb libmodbus
+  735  ls
+  736  clear
+  737  ls
+  738  ls ../recipes-example/
+  739  clear
+  740  ls
+  741  cd libiec61850/
+  742* 
+  743  cd ../../../
+  744  ls
+  745  cd meta-mallikharjun/
+  746  cd recipes-example/
+  747  ls
+  748  l
+  749  ls
+  750  cd -
+  751  ls
+  752  tree
+  753  ls
+  754  ls hello
+  755  ls
+  756  vim hello/hello_1.0.bb
+  757  ls
+  758  cd libdynamic/
+  759  ls
+  760  vim libdynamic_1.0.bb 
+  761  cd ../..
+  762  cd ..
+  763  cd meta-mallikharjun/recipes-example/libdynamic
+  764  ls
+  765  vim libdynamic_1.0.bb 
+  766  ls
+  767  cd ..
+  768  ls
+  769  ls hello-cc
+  770  vim hello-cc/hello-cc_1.0.bb 
+  771  ls
+  772  ls helloconf/
+  773  ls helloconf/files/
+  774  ls helloconf/
+  775  ls
+  776  vim hello-cmake/
+  777  vim hello-cmake/files/CMakeLists.txt 
+  778  ls
+  779  vim libstatic/libstatic_1.0.bb 
+  780  ls
+  781  cd
+  782  cd ga
+  783  cd practice_yocto/
+  784  ls
+  785  mkdirn siva
+  786  mkdir siva
+  787  cd siva/
+  788  ls
+  789  mkdir src
+  790  cd src/
+  791  vim hello.c
+  792  cd ..
+  793  ls
+  794  touch configure.ac
+  795  touch Makefile.am
+  796  vim src/Makefile.am
+  797  touch src/Makefile.am
+  798  ls
+  799  tree
+  800  vim configure.ac 
+  801  vim Makefile
+  802  vim Makefile.am 
+  803  vim src/Makefile.am 
+  804  autoreconf -if
+  805  vim configure.ac 
+  806  autoreconf -if
+  807  ls
+  808  ./configure
+  809  ls
+  810  make
+  811  ls
+  812  ls src/
+  813  mkdir image
+  814  make install DESTDIR=/home/pmallikarjun/practice_yocto/siva/image/
+  815  ls image/
+  816  ls image/usr/
+  817  ls image/usr/local/
+  818  ls image/usr/local/bin/
+  819  ./configure --prefix=/usr
+  820  ls
+  821  cd ../
+  822  cd
+  823  cd yoctotutor/
+  824  ls
+  825  cd sources/poky/meta/recipes-core/images/
+  826  ls
+  827  vim core-image-minimal.bb 
+  828  cd ..
+  829  ls
+  830  cd packagegroups/
+  831  ls
+  832  vim packagegroup-core-boot.bb 
+  833  ls
+  834  cd ..
+  835  cd images/
+  836  ls
+  837  vim core-image-minimal.bb 
+  838  cd ../..
+  839  cd classes
+  840  ls
+  841  cd ..
+  842  ls classes-recipe/
+  843  vim classes-recipe/core-image.bbclass 
+  844  vim classes-recipe/image.bbclass 
+  845  ls
+  846  cd recipes-bsp/
+  847  ls
+  848  cd u
+  849  cd u-boot/
+  850  ls
+  851  vim u-boot_2024.01.bb 
+  852  ls
+  853  cd ..
+  854  ls
+  855  cd ../..
+  856  cd ../build/
+  857  ls
+  858  cd meta-mallikharjun/
+  859  ls
+  860  mkdir recipes-bsp
+  861  mkdir recipes-bsp/u-boot
+  862  ls
+  863  cd recipes-bsp/u-boot/
+  864  ls
+  865  vim u-boot-new_2024.01.bb
+  866  cp ~/yoctotutor/sources/poky/meta/recipes-bsp/u-boot/u-boot_2024.01.bb u-boot-new_2024.01.bb 
+  867  ls
+  868* 
+  869  cp ~/yoctotutor/sources/poky/meta/recipes-bsp/u-boot/files/ . -rf
+  870  ls files/
+  871  history > history.txt
